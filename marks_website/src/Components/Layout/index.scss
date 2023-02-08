@@ -1,0 +1,119 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+
+.main{
+    position: relative;
+
+
+    &__socials{
+        @include breakpoint-down(small){
+            display: none;
+        }
+        
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        
+        bottom: 0%;
+        left: 5%;
+        
+        @include breakpoint-up(large){
+            
+            left: 3%;
+            
+        }
+
+        .social-icons{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            
+            svg{
+                height: 1.5rem;
+                width: 1.5rem;
+                color: $light-slate;
+                cursor: pointer;
+
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+        
+        .whiteline{
+            width: 2px;
+            height: 106px;
+            background-color: #fff;
+            margin-top: 1rem;
+            margin-left: 10px; 
+        }
+        
+        // .whiteline{
+        //     width: 1px;
+        //     height: 106px;
+        //     background-color: #fff;
+        //     transform: rotate(180deg);
+        //     bottom: 0%;
+        //     position: fixed;
+        //     left: 50px;
+          
+        // }
+
+
+
+        
+    }
+    
+    &__contact{
+        @include breakpoint-down(small){
+            display: none;
+        }
+        position: fixed;
+        transform: rotate(90deg);
+        right: -15%;
+        bottom: 10%;
+        color: $light-slate;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @include breakpoint-up(large){
+            right: -8.7%;
+            bottom: 20%;
+            
+        }
+        
+
+        &:hover{
+            color: $yellow;
+        }
+
+        .contact-info{
+            font-family: $font-mono;
+            font-size: .9rem;
+        }
+        
+
+        .whiteline{
+            height: 1.5px;
+            width: 140px;
+            background-color: #fff;
+            
+            @include breakpoint-up(large){
+                margin-left: 2px;
+            }
+            
+            
+        }
+        // .whiteline{
+        //     width: 1px;
+        //     height: 106px;
+        //     background-color: #fff;
+        //     transform: rotate(90deg);
+        //     bottom: -251%;
+        //     position: fixed;
+        //     right: -39%;
+          
+        // }
+    }
+}

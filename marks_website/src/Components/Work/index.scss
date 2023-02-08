@@ -1,0 +1,398 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+
+
+.work{
+    margin: 140px 180px 170px 180px;
+
+    @include breakpoint-down(medium){
+        margin: 200px 100px 290px 100px;
+    }
+    
+    @include breakpoint-down(small){
+        margin: 100px 20px 150px 20px;
+    }
+
+
+    &__heading{
+
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        
+        @include breakpoint-down(small){
+            margin-bottom: 1rem;
+            gap: 1.5rem;
+
+        }
+        
+        h1{
+            font-family: $font-sans;
+            color: $lightest-slate;
+             
+            @include breakpoint-down(small){
+                font-size: 1.4rem;  
+                
+            }
+
+            span{
+                font-weight: 600;
+                font-size: 1.7rem;
+                color: $yellow;
+                
+                
+                @include breakpoint-down(small){
+                    font-size: 1.3rem;  
+                }
+            }
+        }
+
+        .whiteline{
+            height: 1px;
+            width: 300px;
+            background-color: #fff;
+            
+            @include breakpoint-down(medium){
+                width: 100px;
+                
+            }
+            
+            @include breakpoint-down(small){
+                width: 50px;
+                
+            }
+        }
+    }
+
+    &__projects{
+        .proj-1{
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            @include breakpoint-up(medium){
+                margin-bottom: 5rem;
+
+                box-shadow: none;
+            }
+
+            @include breakpoint-up(large){
+                margin-bottom: 10rem;
+            }
+
+            .img{              
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    height: 250px;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    
+                    @include breakpoint-up(medium){
+                        position: absolute;
+                        width: 55%;
+                        right: 0;
+                        z-index: -1;
+                        border-radius: 5px;
+                    }      
+                    
+                    @include breakpoint-up(large){
+                        height: 300px;
+                    }
+                }
+            }
+                     
+            .desc{
+                border-radius: 5px;
+
+                @include breakpoint-up(medium){ 
+                    width: 60%;   
+                }
+                h3{
+                    margin-bottom: 5px;
+                    color: $yellow;
+                }
+                
+                h2{
+                    margin-bottom: 5px;
+                    color: $lightest-slate;
+                }
+
+                p{
+                    margin: 0;
+                    color: $slate;
+                    font-family: $font-sans;
+                    span{
+                        color: $yellow;
+                    }
+                    @include breakpoint-up(medium){
+                        background-color: $light-bg-darkblue;
+                        padding: 1rem;
+                        border-radius: 5px;
+                    }
+                }
+                
+                ul{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                    padding: 0;
+                    color: $slate;                  
+                }
+                
+                div{
+                    display: flex;
+                    gap: 1rem;
+                    padding-bottom: 10px;
+                    div{
+                        color: $slate;
+                        svg{
+                            height: 30px;
+                            width: 30px;
+                            cursor: pointer;
+                            transition: all .2s ease-in-out;
+                        }
+
+                        :hover{
+                            color: $yellow;
+                        }
+                    }
+                }
+           }
+
+           
+        }
+
+        .proj-2{
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            @include breakpoint-up(medium){
+                margin-bottom: 5rem;
+
+                box-shadow: none;
+            }
+            
+
+            .img{              
+                img{
+                    width: 100%;
+                    height: 250px;
+                    cursor: pointer;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    margin-bottom: 10px;
+
+                    @include breakpoint-up(medium){
+                        width: 55%;
+                        z-index: -1;
+                        border-radius: 5px;
+                        
+                    }        
+                    
+                    @include breakpoint-up(large){
+                        height: 300px;
+                    }
+
+
+                }
+            }
+                     
+            .desc{
+                border-radius: 5px;
+
+                @include breakpoint-up(medium){ 
+                    width: 60%;   
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+                    border-radius: 5px;
+                    margin-top: 1.5rem;
+                }
+                
+                @include breakpoint-up(large){
+                    margin-top: 3.5rem;
+
+                }
+                
+                
+                h2{
+                    margin-bottom: 5px;
+                    color: $lightest-slate;
+
+                    @include breakpoint-up(medium){
+                        text-align: end;
+                    }
+                }
+
+                p{
+                    margin: 0;
+                    color: $slate;
+                    font-family: $font-sans;
+                    span{
+                        color: $yellow;
+                        cursor: pointer;
+                    }
+                    @include breakpoint-up(medium){
+                        background-color: $light-bg-darkblue;
+                        padding: 1rem;
+                        border-radius: 5px;
+                    }
+                }
+                
+                ul{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                    padding: 0;
+                    color: $slate;   
+                    @include breakpoint-up(medium){
+                        justify-content: end;
+                    }               
+                }
+                
+                div{
+                    display: flex;
+                    gap: 1rem;
+                    padding-bottom: 10px;
+
+                    @include breakpoint-up(medium){
+                        justify-content: end;
+                    }
+
+                    div{
+                        color: $slate;
+                        svg{
+                            transition: all .2s ease-in-out;
+                            height: 30px;
+                            width: 30px;
+                            cursor: pointer;
+                        }
+
+                        :hover{
+                            color: $yellow;
+                        }
+                    }
+                }
+           }
+
+           
+        }
+
+        .proj-3{
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            @include breakpoint-up(medium){
+                margin-bottom: 5rem;
+
+                box-shadow: none;
+            }
+
+            @include breakpoint-up(large){
+                margin-bottom: 10rem;
+            }
+
+            .img{              
+                img{
+                    width: 100%;
+                    height: 250px;
+                    cursor: pointer;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    margin-bottom: 10px;
+
+                    @include breakpoint-up(medium){
+                        position: absolute;
+                        width: 55%;
+                        right: 0;
+                        z-index: -1;
+                        border-radius: 5px;
+                    }      
+                    
+                    @include breakpoint-up(large){
+                        height: 300px;
+                    }
+                }
+            }
+                     
+            .desc{
+                border-radius: 5px;
+
+                @include breakpoint-up(medium){ 
+                    width: 60%;  
+                    padding-top: 1.5rem;
+                    
+                }
+                @include breakpoint-up(large){ 
+                    padding-top: 3rem;
+                    
+
+                }
+                h3{
+                    margin-bottom: 5px;
+                    color: $yellow;
+                }
+                
+                h2{
+                    margin-bottom: 5px;
+                    color: $lightest-slate;
+                }
+
+                p{
+                    margin: 0;
+                    color: $slate;
+                    font-family: $font-sans;
+                    span{
+                        color: $yellow;
+                    }
+                    @include breakpoint-up(medium){
+                        background-color: $light-bg-darkblue;
+                        padding: 1rem;
+                        border-radius: 5px;
+                    }
+                }
+                
+                ul{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                    padding: 0;
+                    color: $slate;                  
+                }
+                
+                div{
+                    display: flex;
+                    gap: 1rem;
+                    padding-bottom: 10px;
+                    div{
+                        color: $slate;
+                        svg{
+                            height: 30px;
+                            width: 30px;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                        }
+
+                        :hover{
+                            color: $yellow;
+                        }
+                    }
+                }
+           }
+
+           
+        }
+    }
+
+
+}

@@ -1,0 +1,98 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+
+
+.home{
+    position: relative;
+    z-index: 0;
+
+    margin: 70px 180px 70px 180px;
+    
+    @include breakpoint-down(medium){
+        margin: 200px 100px 400px 100px;
+    }
+    
+    @include breakpoint-down(small){
+        margin: 100px 20px 200px 20px;
+    }
+
+
+
+    &__intro{
+        color: $yellow;
+        font-family: $font-mono;
+        font-size: 1.1rem;
+    
+    }
+
+
+    &__name{
+        color: $lightest-slate;
+        font-size: 65px;
+        font-family: $font-sans;
+        
+        @include breakpoint-down(medium){
+            font-size: 60px;  
+        }
+
+        @include breakpoint-down(small){
+            font-size: 36px;
+        }
+
+    }
+
+    &__title{
+        color: $slate;
+        font-size: 65px;
+        font-family: $font-sans;
+        
+        
+        @include breakpoint-down(medium){
+            line-height: 1;
+            font-size: 60px; 
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint-down(small){
+            font-size: 36px;
+        }
+
+    }
+
+    &__desc{
+        width: 600px;
+        font-family: $font-sans;
+        color: $slate;
+        font-size: 18px;
+        margin-bottom: 2rem;
+        
+        @include breakpoint-down(medium){
+            font-size: 17px; 
+            width: 550px;
+            margin-bottom: 3rem;
+        }
+        
+        @include breakpoint-down(small){
+            font-size: 16px;
+            width: fit-content;
+        }
+
+    }
+
+    &__button{
+        font-size: 1rem;
+        padding: 1.2rem 1.7rem;
+        background-color: $bg-darkblue;
+        font-family: $font-mono;
+        color: $yellow;
+        cursor: pointer;
+        border: 1px solid $light-yellow;
+        border-radius: 5px;
+        &:hover{
+            background-color: $light-yellow;
+        }
+    }
+
+
+    
+}

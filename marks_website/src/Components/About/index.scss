@@ -1,0 +1,100 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+
+
+.about{
+    margin: 140px 180px 170px 180px;
+
+    @include breakpoint-down(medium){
+        margin: 200px 100px 290px 100px;
+    }
+    
+    @include breakpoint-down(small){
+        margin: 100px 20px 20px 20px;
+    }
+
+    &__heading{
+
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        
+        @include breakpoint-down(small){
+            margin-bottom: 1rem;
+            gap: 1.5rem;
+
+        }
+        
+        h1{
+            font-family: $font-sans;
+            color: $lightest-slate;
+             
+            @include breakpoint-down(small){
+                font-size: 1.4rem;  
+                
+            }
+
+            span{
+                font-weight: 600;
+                font-size: 1.7rem;
+                color: $yellow;
+                
+                
+                @include breakpoint-down(small){
+                    font-size: 1.3rem;  
+                }
+            }
+        }
+
+        .whiteline{
+            height: 1px;
+            width: 300px;
+            background-color: #fff;
+            
+            @include breakpoint-down(medium){
+                width: 250px;
+                
+            }
+            
+            @include breakpoint-down(small){
+                width: 90px;
+                
+            }
+        }
+    }
+
+    &__desc{
+        font-size: 18px;
+
+
+        p{
+            color: $slate;
+            font-family: $font-sans;
+            span{
+                a{
+                    color: $yellow;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+        
+        
+        .tech-list{
+            color: $slate;
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            list-style: none;
+            padding: 0;
+
+            li::before{
+                content: "▹";
+                color: $yellow;
+                line-height: 12px;
+              
+            }
+
+        }
+    }
+}

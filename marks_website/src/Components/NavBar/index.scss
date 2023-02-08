@@ -1,0 +1,171 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+@import '../../SCSS/animations';
+
+
+
+.navbar{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2.5rem 1rem 2.5rem;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    
+    
+    @include breakpoint-down(small){
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+        
+    }
+
+    &__logo{
+        height: 2.6rem;
+        width: 2.2rem;
+
+        @include breakpoint-down(small){
+            height: 2.4rem;
+            width: 2rem;
+            
+        }
+    }
+
+    
+
+    &__ham-btn{//creates hamburger menu
+        cursor: pointer;
+        > span{
+            display: block;
+            width: 1.8rem;
+            height: 2px;
+            background-color: #fff;
+            transition: all .3s ease-in-out;
+            transform-origin: 3.8px 1.4px;
+            &:not(:last-child){
+                margin-bottom: 5.5px;
+            }
+
+        }
+        
+        @include breakpoint-up(medium){
+            display: none;
+        }
+
+        &.open{
+            > span:first-child{
+                transform: rotate(45deg);   
+            }
+    
+            > span:nth-child(2){
+                opacity: 0;
+            }
+    
+            > span:last-child{
+                transform: rotate(-42deg);   
+            }
+        }
+
+        
+    }
+
+    &__navlinks{
+        display: flex;
+        font-family: $font-mono;
+        align-items: center;
+        color: $light-slate;
+        list-style: none;
+        font-size: 1rem;
+        gap: 2rem;
+        transition: all .2s ease-in-out;
+        
+        @include breakpoint-down(small){
+            display: none;
+        }
+        
+        a{
+            
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            
+            span{
+                font-family: $font-mono;
+                color: $yellow;
+                font-size: .9rem;
+                
+            }
+
+            button{
+                font-size: 1rem;
+                padding: .6rem .8rem;
+                background-color: $bg-darkblue;
+                font-family: $font-mono;
+                color: $yellow;
+                cursor: pointer;
+                border: 1px solid $light-yellow;
+                border-radius: 5px;
+
+                
+
+            }
+
+        }
+
+        button:hover{
+            background-color: $light-yellow;
+        }
+        :hover{
+            color: $yellow;
+        }
+        
+        
+
+    }
+
+    &__mobile-menu{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 270px;
+        width: 280px;
+        margin-top: 26rem;
+        border-radius: 3px;
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        z-index: 3;
+       
+
+        .dropdown{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding-top: 2.6rem;
+            padding-bottom: 42px;
+            font-family: $font-mono;
+            color: $light-slate;
+            cursor: pointer;
+            background-color: $bg-darkblue;
+            
+            :hover{
+                color: $yellow;
+            }
+
+            button{
+                font-size: 1rem;
+                padding: .6rem .8rem;
+                background-color: $bg-darkblue;
+                font-family: $font-mono;
+                color: $yellow;
+                cursor: pointer;
+                border: 1px solid $light-yellow;
+                border-radius: 5px;
+            }
+            button:hover{
+                background-color: $light-yellow;
+            }
+        }
+    }
+
+
+}

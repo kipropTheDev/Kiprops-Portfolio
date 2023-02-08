@@ -1,0 +1,147 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+
+
+.projects{
+    margin: 140px 180px 170px 180px;
+    
+    @include breakpoint-down(medium){
+        margin: 200px 100px 290px 100px;
+    }
+    
+    @include breakpoint-down(small){
+        margin: 100px 20px 150px 20px;
+    }
+    
+    
+    
+    
+    
+    &__heading{
+        margin-bottom: 2rem;
+        text-align: center;
+
+        h1{
+            color: $lightest-slate;
+            font-size: 1.5rem;
+            font-family: $font-sans;
+            
+            @include breakpoint-up(medium){
+                font-size: 1.7rem;
+                
+            }
+
+            @include breakpoint-up(large){
+
+            }
+
+        }
+
+        a{
+            color: $yellow;
+            font-size: 1.1rem;
+            text-align: center;
+            font-family: $font-sans;
+            text-decoration: none;
+            cursor: pointer;
+            
+            @include breakpoint-up(medium){
+                font-size: 1.2rem;
+                
+            }
+            
+            @include breakpoint-up(large){
+                
+            }
+            
+            &:hover{
+                text-decoration: underline;
+
+            }
+        }
+    }
+
+
+    .all-projects{
+        display: block;
+
+        @include breakpoint-up(medium){
+            display: grid;
+            grid-template-columns: repeat(2, 48%);
+            grid-gap: 1.7rem;
+        }
+        
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(3, 31%);
+
+        }
+    }
+    
+    &__folders{
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        padding: 15px 20px 15px 20px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        transition:all .3s ease-in-out;
+
+        &:hover{
+            transform: scale(1.05);
+        }
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0 1rem 0;
+
+            .folder-icon{
+                svg{
+                    width: 2.625rem;
+                    color: $yellow;
+                }
+            }
+
+            .external-links{
+                display: flex;
+                gap: .5rem;
+
+                div{
+                    width: 25px;
+                    color: $slate;
+                    transition: all .3s ease-in-out;
+
+                    &:hover{
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+
+        .title{
+            color: $lightest-slate;
+            font-family: $font-sans;
+            font-size: 13px;
+            margin-bottom: 1rem;
+        }
+        
+        .desc{
+            color: $slate;
+            font-family: $font-sans;
+            font-size: 17px;
+            line-height: 1.4;
+            margin-bottom: 1.4rem;
+            
+        }
+        
+        .tech-stack{
+            display: flex;
+            gap: 1rem;
+            color: $slate;
+            padding: 0;
+
+        }
+        
+    }
+
+    
+}

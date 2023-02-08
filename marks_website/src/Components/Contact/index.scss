@@ -1,0 +1,63 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/variables';
+
+.contact{
+    margin: 140px 180px 170px 180px;
+    text-align: center;
+
+    @include breakpoint-down(medium){
+        margin: 200px 100px 290px 100px;
+    }
+    
+    @include breakpoint-down(small){
+        margin: 100px 20px 150px 20px;
+    }
+
+
+    &__heading{
+        font-family: $font-mono;
+        color: $yellow;
+        margin-bottom: 1rem;
+    }
+
+    &__title{
+        color: $lightest-slate;
+        font-size: 1.5rem;
+        font-family: $font-sans;
+        margin-bottom: 1rem;
+
+        @include breakpoint-down(small){
+            font-size: 1.15rem;
+        }
+    }
+    
+    &__desc{
+        color: $slate;
+        font-family: $font-sans;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding: 0 1rem 0 1rem;
+        margin-bottom: 3rem;
+
+        @include breakpoint-down(small){
+            font-size: 1rem;
+        }
+        
+    }
+
+    &__btn{
+        button{
+            font-size: 1rem;
+            padding: 1.2rem 1.7rem;
+            background-color: $bg-darkblue;
+            font-family: $font-mono;
+            color: $yellow;
+            cursor: pointer;
+            border: 1px solid $light-yellow;
+            border-radius: 5px;
+            &:hover{
+                background-color: $light-yellow;
+            }
+        }
+    }
+}
