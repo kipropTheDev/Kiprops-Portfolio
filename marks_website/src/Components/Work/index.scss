@@ -20,6 +20,7 @@
         align-items: center;
         gap: 2rem;
         margin-bottom: 3rem;
+        font-family: $font-sans;
         
         @include breakpoint-down(small){
             margin-bottom: 1rem;
@@ -119,6 +120,8 @@
                 h2{
                     margin-bottom: 5px;
                     color: $lightest-slate;
+                    font-family: $font-sans;
+
                 }
 
                 p{
@@ -141,7 +144,9 @@
                     flex-direction: row;
                     gap: 1.5rem;
                     padding: 0;
-                    color: $slate;                  
+                    color: $slate;    
+                    font-family: $font-mono; 
+                    font-size: 16px;             
                 }
                 
                 div{
@@ -151,8 +156,8 @@
                     div{
                         color: $slate;
                         svg{
-                            height: 30px;
-                            width: 30px;
+                            height: 25px;
+                            width: 25px;
                             cursor: pointer;
                             transition: all .2s ease-in-out;
                         }
@@ -225,6 +230,8 @@
                 h2{
                     margin-bottom: 5px;
                     color: $lightest-slate;
+                    font-family: $font-sans;
+
 
                     @include breakpoint-up(medium){
                         text-align: end;
@@ -253,6 +260,8 @@
                     gap: 1.5rem;
                     padding: 0;
                     color: $slate;   
+                    font-family: $font-mono; 
+                    font-size: 16px; 
                     @include breakpoint-up(medium){
                         justify-content: end;
                     }               
@@ -271,8 +280,8 @@
                         color: $slate;
                         svg{
                             transition: all .2s ease-in-out;
-                            height: 30px;
-                            width: 30px;
+                            height: 25px;
+                            width: 25px;
                             cursor: pointer;
                         }
 
@@ -345,6 +354,8 @@
                 h2{
                     margin-bottom: 5px;
                     color: $lightest-slate;
+                    font-family: $font-sans;
+
                 }
 
                 p{
@@ -367,7 +378,9 @@
                     flex-direction: row;
                     gap: 1.5rem;
                     padding: 0;
-                    color: $slate;                  
+                    color: $slate;  
+                    font-family: $font-mono; 
+                    font-size: 16px;                 
                 }
                 
                 div{
@@ -377,8 +390,8 @@
                     div{
                         color: $slate;
                         svg{
-                            height: 30px;
-                            width: 30px;
+                            height: 25px;
+                            width: 25px;
                             cursor: pointer;
                             transition: all .3s ease-in-out;
                         }

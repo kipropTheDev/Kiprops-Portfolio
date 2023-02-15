@@ -1,7 +1,21 @@
 import React from 'react'
 import './index.scss'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Contact() {
+
+    const notify = () => toast("Email Copied!")
+    const copyText = () => {
+        navigator.clipboard.writeText('kiprop.thedev@gmail.com')
+    }
+
+    const clickFun = () => {
+        notify()
+        copyText()
+    }
+    
   return (
     <div className='contact'>
         <div className='contact__heading'>
@@ -17,7 +31,19 @@ function Contact() {
         </div>
 
         <div className='contact__btn'>
-            <button>Send Email</button>
+            <button onClick={() => clickFun() } >Copy Email</button>
+            <ToastContainer 
+                position="top-center"
+                autoClose={1500}
+                hideProgressBar={true}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </div>
     </div>
   )

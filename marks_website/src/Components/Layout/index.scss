@@ -19,7 +19,7 @@
         
         @include breakpoint-up(large){
             
-            left: 3%;
+            left: 4%;
             
         }
 
@@ -29,8 +29,8 @@
             gap: 1rem;
             
             svg{
-                height: 1.5rem;
-                width: 1.5rem;
+                height: 20px;
+                width: 20px;
                 color: $light-slate;
                 cursor: pointer;
 
@@ -41,7 +41,7 @@
         }
         
         .whiteline{
-            width: 2px;
+            width: 1px;
             height: 106px;
             background-color: #fff;
             margin-top: 1rem;
@@ -78,7 +78,7 @@
         align-items: center;
         gap: 1rem;
         @include breakpoint-up(large){
-            right: -8.7%;
+            right: -7.5%;
             bottom: 20%;
             
         }
@@ -89,13 +89,13 @@
         }
 
         .contact-info{
-            font-family: $font-mono;
-            font-size: .9rem;
+            font-family: $font-sans;
+            font-size: 15px;
         }
         
 
         .whiteline{
-            height: 1.5px;
+            height: 1px;
             width: 140px;
             background-color: #fff;
             

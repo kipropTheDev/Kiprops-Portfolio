@@ -14,9 +14,6 @@
     }
     
     
-    
-    
-    
     &__heading{
         margin-bottom: 2rem;
         text-align: center;
@@ -78,16 +75,24 @@
     }
     
     &__folders{
+        position: relative;
         box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-        padding: 15px 20px 15px 20px;
+        padding: 30px 36px 15px 36px;
         margin-bottom: 1rem;
         cursor: pointer;
         transition:all .3s ease-in-out;
+        
+        @include breakpoint-down(small){
+            padding: 15px 20px 15px 20px;
+
+        }
 
         &:hover{
             transform: scale(1.05);
+            
         }
 
+        
         .top{
             display: flex;
             justify-content: space-between;
@@ -120,24 +125,32 @@
         .title{
             color: $lightest-slate;
             font-family: $font-sans;
-            font-size: 13px;
+            font-size: 16px;
             margin-bottom: 1rem;
+
+            
+    
+            
         }
         
         .desc{
             color: $slate;
             font-family: $font-sans;
-            font-size: 17px;
+            font-size: 15px;
             line-height: 1.4;
-            margin-bottom: 1.4rem;
+            margin-bottom: 2rem;
             
         }
         
         .tech-stack{
             display: flex;
+            font-family: $font-sans;
+            font-size: 12px;
             gap: 1rem;
             color: $slate;
             padding: 0;
+            position: absolute;
+            bottom: 0;
 
         }
         

@@ -84,6 +84,8 @@
         .tech-list{
             color: $slate;
             display: grid;
+            font-family: $font-mono;
+            font-size: 16px;
             grid-template-columns: repeat(2, 200px);
             list-style: none;
             padding: 0;

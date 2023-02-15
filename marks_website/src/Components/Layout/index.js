@@ -2,23 +2,38 @@ import React from 'react'
 import Navbar from '../NavBar'
 import Home from '../Home'
 import About from '../About'
-import { Outlet } from 'react-router-dom'
-
 import './index.scss'
 import Work from '../Work'
 import Projects from '../Projects'
 import Contact from '../Contact'
+import "animate.css/animate.min.css"
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
 function Layout() {
+
+  
+
   return (
-    <div className='main'>
+    <div className='main'> 
       <Navbar />
       <Home />
-      <About />
-      <Work />
-      <Projects />
-      <Contact />
+
+      <AnimationOnScroll animateIn='animate__zoomIn' animateOnce="true">
+        <About />
+      </AnimationOnScroll>
+
+      <AnimationOnScroll animateIn='animate__zoomIn' animateOnce="true">
+        <Work />
+      </AnimationOnScroll>
+
+      <AnimationOnScroll animateIn='animate__zoomIn' animateOnce="true">
+        <Projects />
+      </AnimationOnScroll>
+      
+      <AnimationOnScroll animateIn='animate__zoomIn' animateOnce="true">
+        <Contact />
+      </AnimationOnScroll>
       
 
       

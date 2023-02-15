@@ -31,7 +31,7 @@ function Projects() {
               </div>
 
               <div className='title'>
-                <h2>Python Desktop Game- Issa Shooter Game</h2>
+                <h2>Python Desktop Game - Shooter Game</h2>
 
               </div>
 

@@ -64,7 +64,7 @@
         font-family: $font-sans;
         color: $slate;
         font-size: 18px;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         
         @include breakpoint-down(medium){
             font-size: 17px; 
