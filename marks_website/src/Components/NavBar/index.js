@@ -34,9 +34,9 @@ function Navbar() {
         </a>
 
         <div className='navbar__navlinks '>
-          <Link activeClass='active' to="about" smooth={true} offset={-50} duration={500}><span>01.</span> About</Link>
-          <Link activeClass='active' to="work" smooth={true} offset={-50} duration={500}><span>02.</span> Projects</Link>
-          <Link activeClass='active' to="projects" smooth={true} offset={-50} duration={500}><span>03.</span> My Work</Link>
+          <Link activeClass='active' to="home" smooth={true} offset={-50} duration={500}><span>01.</span> Home</Link>
+          <Link activeClass='active' to="about" smooth={true} offset={-50} duration={500}><span>02.</span> About</Link>
+          <Link activeClass='active' to="work" smooth={true} offset={-50} duration={500}><span>03.</span> Projects</Link>
           <Link activeClass='active' to="contact" smooth={true} offset={-50} duration={500}><span>04.</span> Contact</Link>
           <a><button className='navbar__btn'>Resume</button></a>
         </div>
@@ -44,9 +44,9 @@ function Navbar() {
 
       <div className={`navbar__mobile-menu hide-for-large ${fade}`}>
         <div className='dropdown'>
-          <Link activeClass='active' to="about" smooth={true} offset={-50} duration={500} onClick={()=>{ToggleMenu()}}><span>01.</span> About</Link>
-          <Link activeClass='active' to="work" smooth={true} offset={-50} duration={500} onClick={()=>{ToggleMenu()}}><span>02.</span> Projects</Link>
-          <Link activeClass='active' to="projects" smooth={true} offset={-50} duration={500} onClick={()=>{ToggleMenu()}}><span>03.</span> My Work</Link>
+          <Link activeClass='active' to="home" smooth={true} offset={-50} duration={500} onClick={()=>{ToggleMenu()}}><span>01.</span> Home</Link>
+          <Link activeClass='active' to="about" smooth={true} offset={-50} duration={500} onClick={()=>{ToggleMenu()}}><span>02.</span> About</Link>
+          <Link activeClass='active' to="work" smooth={true} offset={-50} duration={500} onClick={()=>{ToggleMenu()}}><span>03.</span> Projects</Link>
           <Link activeClass='active' to="contact" smooth={true} offset={-50} duration={500} onClick={()=>{ToggleMenu()}}><span>04.</span> Contact</Link>
           <a><button className='navbar__btn'>Resume</button></a>
         </div>
