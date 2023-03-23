@@ -16,7 +16,7 @@
     &__heading{
 
         display: flex;
-        align-items: center;
+        align-items: baseline;
         gap: 2rem;
         margin-bottom: 3rem;
         
@@ -50,7 +50,9 @@
         .whiteline{
             height: 1px;
             width: 300px;
-            background-color: #fff;
+            background-color: $slate;
+            opacity: .5;
+            
             
             @include breakpoint-down(medium){
                 width: 250px;

@@ -9,7 +9,7 @@ function Work() {
   return (
     <div className='work'>
         <div className='work__heading'>
-          <h1><span>02. </span>Things I've Built</h1>
+          <h1><span>03. </span>Things I've Built</h1>
           <div className='whiteline'></div>
         </div>
 
